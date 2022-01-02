@@ -4,8 +4,9 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,Registry, ShellAPI,
-  Vcl.FileCtrl;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,Registry, ShellAPI, ShlObj ,
+  Vcl.FileCtrl, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus,
+  Vcl.ComCtrls;
 
 type
   TForm4 = class(TForm)
@@ -16,12 +17,14 @@ type
     Button4: TButton;
     Button5: TButton;
     Button6: TButton;
-    DirectoryListBox1: TDirectoryListBox;
-    DriveComboBox1: TDriveComboBox;
-    FileListBox1: TFileListBox;
-    procedure Button1Click(Sender: TObject);
+    OpenDialog1: TOpenDialog;
+    Label1: TLabel;
     procedure Button6Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -35,28 +38,32 @@ implementation
 
 {$R *.dfm}
 
+
 procedure TForm4.Button1Click(Sender: TObject);
 begin
-  {ShellExecute(0, nil, 'cmd.exe', '/C find "320" in.txt > out.txt', nil, SW_HIDE);          }
-  WinExec(PAnsiChar('cmd.exe /c Imagens\projeto-javafx-jdbc.pdf find "320" in.txt > out.txt'), SW_HIDE); // Use /c para janela do prompt executar o comando e fechar automaticamente em seguida...         //OU         WinExec(PAnsiChar('cmd.exe /k SEUCOMANDOAQUI'), sw_normal); // Use /k para janela do prompt permanecer aberta..
-  Sleep(1000);
-  Memo1.Lines.LoadFromFile('out.txt');
 
-  //WinExec(PAnsiChar('cmd.exe /c start eclipse.exe'), sw_normal);
-  // Use /c para janela do prompt executar o comando e fechar automaticamente em seguida...
-  //OU
-  //WinExec(PAnsiChar('cmd.exe /k SEUCOMANDOAQUI'), sw_normal); // Use /k para janela do prompt permanecer aberta..
+   if OpenDialog1.Execute() then
+     begin
+       Memo1.Lines.Add(OpenDialog1.FileName);
+
+     end;
+      //  OpenDialog1.Filter:= 'Todos os arquivos (*.pdf )';
+     //'Todos os arquivos (*. *) | *. * | Arquivos de projeto (* .dpr) | * .dpr | Unidades Pascal (* .pas) | * .pas ';
+     //Obs o filtro não esta funcionando
+
+end;
+
+procedure TForm4.Button2Click(Sender: TObject);
+begin
+WinExec(PAnsiChar('cmd.exe /c quit'), sw_normal);
 end;
 
 procedure TForm4.Button3Click(Sender: TObject);
-var
-  vMeuArquivo : String;
-begin
-  vMeuArquivo := 'C:\teste\teste.pdf';
-  ShowMessage(vMeuArquivo);
 
-  vMeuArquivo := ChangeFileExt(vMeuArquivo, '.jpg');
-  ShowMessage(vMeuArquivo);
+     var EditCaminho:String;
+begin
+         WinExec(PAnsiChar('cmd.exe /c C:\Users\pc\eclipse\java-2021-09\eclipse\eclipse.exe'), SW_SHOWMINIMIZED);
+
 end;
 
 procedure TForm4.Button6Click(Sender: TObject);
@@ -65,7 +72,10 @@ begin
 
 end;
 
-
+procedure TForm4.Label1Click(Sender: TObject);
+begin
+ShowMessage('Sistema para recuperação de banco de dados   Sistema feito em Delphi 10  Criado por Júlio César Soares de Almeida ');
+end;
 
 end.
 
