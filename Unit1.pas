@@ -19,11 +19,19 @@ type
     Button6: TButton;
     OpenDialog1: TOpenDialog;
     Label1: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Gfix: TButton;
+    Button7: TButton;
     procedure Button6Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure GfixClick(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -37,32 +45,28 @@ var
 implementation
 
 {$R *.dfm}
-
+   uses Unit2;
 
 procedure TForm4.Button1Click(Sender: TObject);
 begin
 
    if OpenDialog1.Execute() then
      begin
-       Memo1.Lines.Add(OpenDialog1.FileName);
-
+     //  Memo1.Lines.Add(OpenDialog1.FileName);
+       Edit1.Text :=  OpenDialog1.FileName;
      end;
       //  OpenDialog1.Filter:= 'Todos os arquivos (*.pdf )';
      //'Todos os arquivos (*. *) | *. * | Arquivos de projeto (* .dpr) | * .dpr | Unidades Pascal (* .pas) | * .pas ';
      //Obs o filtro não esta funcionando
-
 end;
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
-WinExec(PAnsiChar('cmd.exe /c quit'), sw_normal);
+     WinExec(PAnsiChar('cmd.exe /c quit'), sw_normal);
 end;
 
 procedure TForm4.Button3Click(Sender: TObject);
-
-     var EditCaminho:String;
 begin
-
          WinExec(PAnsiChar('cmd.exe /c exit C:\Users\pc\eclipse\java-2021-09\eclipse\eclipse.exe'), SW_SHOW);
          Sleep(3);
 
@@ -70,8 +74,32 @@ end;
 
 procedure TForm4.Button6Click(Sender: TObject);
 begin
-      WinExec(PAnsiChar('cmd.exe /c shutdown -r -t 45'), sw_normal);
+     // WinExec(PAnsiChar('cmd.exe /c shutdown -r -t 45'), sw_normal);
+     WinExec(PAnsiChar('cmd.exe /c '), sw_normal);
       Sleep(3);
+
+end;
+
+procedure TForm4.Button7Click(Sender: TObject);
+begin
+      Form2:= TForm2.Create(Self);
+      Form2.ShowModal;
+      Form2.Release;
+
+end;
+
+procedure TForm4.GfixClick(Sender: TObject);
+var
+    banco:String;
+    infor:String;
+
+begin
+    //infor := 'C:\Users\pc\eclipse\java-2021-09\eclipse\eclipse.exe';
+    //Edit1.Text :=  OpenDialog1.FileName;
+  banco := Edit1.Text;
+   /// banco := PAnsiChar('cmd.exe /c ren'+ banco2);
+    WinExec(PAnsiChar('cmd.exe /c start \'+ banco + '\ cloe'), sw_normal);
+   Memo1.Lines.Add(banco);
 
 end;
 

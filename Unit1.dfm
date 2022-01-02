@@ -1,7 +1,7 @@
 object Form4: TForm4
   Left = 0
   Top = 0
-  Caption = 'Form4'
+  Caption = 'Restore Bless Sistemas'
   ClientHeight = 562
   ClientWidth = 778
   Color = clBtnHighlight
@@ -21,6 +21,20 @@ object Form4: TForm4
     Caption = '?'
     OnClick = Label1Click
   end
+  object Label2: TLabel
+    Left = 69
+    Top = 54
+    Width = 142
+    Height = 13
+    Caption = 'Banco de dados para Restore'
+  end
+  object Label3: TLabel
+    Left = 69
+    Top = 141
+    Width = 36
+    Height = 13
+    Caption = 'Banco .'
+  end
   object Memo1: TMemo
     Left = 8
     Top = 336
@@ -31,7 +45,7 @@ object Form4: TForm4
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 24
+    Left = 72
     Top = 8
     Width = 145
     Height = 25
@@ -40,8 +54,8 @@ object Form4: TForm4
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 347
-    Top = 71
+    Left = 657
+    Top = 102
     Width = 113
     Height = 25
     Caption = 'Parar FireBird'
@@ -49,8 +63,8 @@ object Form4: TForm4
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 347
-    Top = 8
+    Left = 657
+    Top = 71
     Width = 113
     Height = 25
     Caption = 'Parar Replicador'
@@ -58,29 +72,63 @@ object Form4: TForm4
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 531
-    Top = 8
+    Left = 657
+    Top = 133
     Width = 113
     Height = 25
     Caption = 'Reiniciar/ Replicador'
     TabOrder = 4
   end
   object Button5: TButton
-    Left = 531
-    Top = 71
+    Left = 657
+    Top = 164
     Width = 113
     Height = 25
     Caption = 'Reiniciar/ FireBird'
     TabOrder = 5
   end
   object Button6: TButton
-    Left = 680
-    Top = 281
+    Left = 640
+    Top = 3
     Width = 75
     Height = 25
     Caption = 'reiniciar pc'
     TabOrder = 6
     OnClick = Button6Click
+  end
+  object Edit1: TEdit
+    Left = 24
+    Top = 73
+    Width = 257
+    Height = 21
+    TabOrder = 7
+    Text = 'Banco de dados'
+  end
+  object Edit2: TEdit
+    Left = 24
+    Top = 160
+    Width = 257
+    Height = 21
+    TabOrder = 8
+    Text = 'Edit1'
+  end
+  object Gfix: TButton
+    Left = 328
+    Top = 71
+    Width = 75
+    Height = 25
+    Caption = 'Gfix'
+    TabOrder = 9
+    OnClick = GfixClick
+  end
+  object Button7: TButton
+    Left = 680
+    Top = 216
+    Width = 75
+    Height = 25
+    Caption = 'Ideris'
+    TabOrder = 10
+    OnClick = Button7Click
   end
   object OpenDialog1: TOpenDialog
     Left = 8
