@@ -16,8 +16,8 @@ object Form4: TForm4
   object Label1: TLabel
     Left = 756
     Top = 8
-    Width = 16
-    Height = 14
+    Width = 5
+    Height = 13
     Caption = '?'
     OnClick = Label1Click
   end

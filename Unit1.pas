@@ -62,13 +62,16 @@ procedure TForm4.Button3Click(Sender: TObject);
 
      var EditCaminho:String;
 begin
-         WinExec(PAnsiChar('cmd.exe /c C:\Users\pc\eclipse\java-2021-09\eclipse\eclipse.exe'), SW_SHOWMINIMIZED);
+
+         WinExec(PAnsiChar('cmd.exe /c exit C:\Users\pc\eclipse\java-2021-09\eclipse\eclipse.exe'), SW_SHOW);
+         Sleep(3);
 
 end;
 
 procedure TForm4.Button6Click(Sender: TObject);
 begin
       WinExec(PAnsiChar('cmd.exe /c shutdown -r -t 45'), sw_normal);
+      Sleep(3);
 
 end;
 
