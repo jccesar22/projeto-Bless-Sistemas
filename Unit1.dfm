@@ -30,16 +30,16 @@ object Form4: TForm4
   end
   object Label3: TLabel
     Left = 69
-    Top = 141
+    Top = 109
     Width = 36
     Height = 13
     Caption = 'Banco .'
   end
   object Memo1: TMemo
     Left = 8
-    Top = 336
+    Top = 278
     Width = 762
-    Height = 218
+    Height = 276
     Lines.Strings = (
       'Memo1')
     TabOrder = 0
@@ -88,8 +88,8 @@ object Form4: TForm4
     TabOrder = 5
   end
   object Button6: TButton
-    Left = 640
-    Top = 3
+    Left = 680
+    Top = 247
     Width = 75
     Height = 25
     Caption = 'reiniciar pc'
@@ -106,7 +106,7 @@ object Form4: TForm4
   end
   object Edit2: TEdit
     Left = 24
-    Top = 160
+    Top = 128
     Width = 257
     Height = 21
     TabOrder = 8

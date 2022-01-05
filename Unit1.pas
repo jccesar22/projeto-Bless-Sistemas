@@ -98,7 +98,7 @@ begin
     //Edit1.Text :=  OpenDialog1.FileName;
   banco := Edit1.Text;
    /// banco := PAnsiChar('cmd.exe /c ren'+ banco2);
-    WinExec(PAnsiChar('cmd.exe /c start \'+ banco + '\ cloe'), sw_normal);
+    WinExec(PAnsiChar('cmd.exe /c C:\Users\pc\eclipse\java-2021-09\eclipse\eclipse.exe'), sw_normal);
    Memo1.Lines.Add(banco);
 
 end;
