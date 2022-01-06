@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Restore Bless Sistemas'
-  ClientHeight = 562
+  ClientHeight = 464
   ClientWidth = 778
   Color = clBtnHighlight
   Font.Charset = DEFAULT_CHARSET
@@ -130,8 +130,29 @@ object Form1: TForm1
     TabOrder = 10
     OnClick = Button7Click
   end
+  object Button8: TButton
+    Left = 328
+    Top = 208
+    Width = 75
+    Height = 25
+    Caption = 'Button8'
+    TabOrder = 11
+    OnClick = Button8Click
+  end
+  object ListBox1: TListBox
+    Left = 496
+    Top = 40
+    Width = 155
+    Height = 241
+    ItemHeight = 13
+    TabOrder = 12
+  end
   object OpenDialog1: TOpenDialog
-    Left = 8
-    Top = 280
+    Left = 16
+    Top = 200
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 200
+    Top = 216
   end
 end
