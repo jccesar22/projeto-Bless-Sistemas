@@ -1,4 +1,4 @@
-object Form4: TForm4
+object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Restore Bless Sistemas'

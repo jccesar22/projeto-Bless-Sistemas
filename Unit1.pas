@@ -9,7 +9,7 @@ uses
   Vcl.ComCtrls;
 
 type
-  TForm4 = class(TForm)
+  TForm1 = class(TForm)
     Memo1: TMemo;
     Button1: TButton;
     Button2: TButton;
@@ -40,14 +40,14 @@ type
   end;
 
 var
-  Form4: TForm4;
+  Form1: TForm1;
 
 implementation
 
 {$R *.dfm}
    uses Unit2;
 
-procedure TForm4.Button1Click(Sender: TObject);
+procedure TForm1.Button1Click(Sender: TObject);
 begin
 
    if OpenDialog1.Execute() then
@@ -60,19 +60,19 @@ begin
      //Obs o filtro não esta funcionando
 end;
 
-procedure TForm4.Button2Click(Sender: TObject);
+procedure TForm1.Button2Click(Sender: TObject);
 begin
      WinExec(PAnsiChar('cmd.exe /c quit'), sw_normal);
 end;
 
-procedure TForm4.Button3Click(Sender: TObject);
+procedure TForm1.Button3Click(Sender: TObject);
 begin
          WinExec(PAnsiChar('cmd.exe /c exit C:\Users\pc\eclipse\java-2021-09\eclipse\eclipse.exe'), SW_SHOW);
          Sleep(3);
 
 end;
 
-procedure TForm4.Button6Click(Sender: TObject);
+procedure TForm1.Button6Click(Sender: TObject);
 begin
      // WinExec(PAnsiChar('cmd.exe /c shutdown -r -t 45'), sw_normal);
      WinExec(PAnsiChar('cmd.exe /c '), sw_normal);
@@ -80,7 +80,7 @@ begin
 
 end;
 
-procedure TForm4.Button7Click(Sender: TObject);
+procedure TForm1.Button7Click(Sender: TObject);
 begin
       Form2:= TForm2.Create(Self);
       Form2.ShowModal;
@@ -88,7 +88,7 @@ begin
 
 end;
 
-procedure TForm4.GfixClick(Sender: TObject);
+procedure TForm1.GfixClick(Sender: TObject);
 var
     banco:String;
     infor:String;
@@ -103,7 +103,7 @@ begin
 
 end;
 
-procedure TForm4.Label1Click(Sender: TObject);
+procedure TForm1.Label1Click(Sender: TObject);
 begin
 ShowMessage('Sistema para recuperação de banco de dados   Sistema feito em Delphi 10  Criado por Júlio César Soares de Almeida ');
 end;
