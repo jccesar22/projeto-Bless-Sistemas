@@ -1,0 +1,12 @@
+SIDI
+KQKPLQPHJPJMKP
+HJQHHHPKHJOKKH
+Outros
+QPHJPJMK
+HJQHHHPKHJOKKH
+
+
+update controle_sistema set controle_cgc = 'HJQHHHPKHJOKKH'
+
+
+Usuario:SYSDBA Senha:pmpsyfwr

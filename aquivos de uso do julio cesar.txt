@@ -1,0 +1,2 @@
+/Usuario:SYSDBA /Senha:pmpsyfwr para logar no usuario padrão do sistema
+update controle_sistema set controle_cgc = 'HJQHHHPKHJOKKH' para uso do ib experte para usuário padrão do da bless "do controle cgc"
